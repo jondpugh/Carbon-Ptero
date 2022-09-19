@@ -23,7 +23,7 @@ if [ -f CARBON_FLAG ] || [ "${CARBON}" = 1 ]; then
     echo "Done Patching Rust!"
 fi
 
-curl -sSL "https://raw.githubusercontent.com/jondpugh/Carbon-Ptero/main/run.sh"
+curl -LJO "https://raw.githubusercontent.com/jondpugh/Carbon-Ptero/main/run.sh"
 chmod +x ./run.sh
 
 
