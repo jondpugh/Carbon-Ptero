@@ -1,4 +1,4 @@
-FROM 		--platform=$TARGETOS/$TARGETARCH debian:bullseye-slim
+FROM	    debian:bullseye-slim
 
 LABEL       author="Jon Pugh" maintainer="jon@jonpugh.co.uk"
 
