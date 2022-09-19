@@ -18,9 +18,11 @@ if [ -f CARBON_FLAG ] || [ "${CARBON}" = 1 ]; then
     unzip -o -q Carbon.zip
     rm Carbon.zip
     echo "Patching Rust systems with Carbon..."
-    rm carbon_prepatch.sh
     chmod +x carbon/tools/NStrip
-    ./carbon/tools/NStrip -p -cg --keep-resources -n --unity-non-serialized ./RustDedicated_Data/Managed/Assembly-CSharp.dll ./RustDedicated_Data/Managed/Assembly-CSharp.dll
+    rm carbon_prepatch.sh
+    curl -LJO "https://raw.githubusercontent.com/jondpugh/Carbon-Ptero/main/carbon_prepatch.sh"
+    chmod +x carbon_prepatch.sh
+    sh ./carbon_prepatch.sh
     echo "Done Patching Rust!"
 fi
 
