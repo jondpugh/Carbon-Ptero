@@ -1,9 +1,26 @@
 # Carbon-Ptero
-Pterodactyl egg for Rust with Carbon Mod
 
-Working But Under Development
+The only aim in Rust is to survive. To do this you will need to overcome struggles such as hunger, thirst and cold. Build a fire. Build a shelter. Kill animals for meat. Protect yourself from other players, and kill them for meat. Create alliances with other players and form a town. Do whatever it takes to survive.
 
-Upload egg-rust-carbon.json to your Pterodactyl Rust nest.
-Create your server, Set your variables and click install to watch the magic happen.
+Adds variables to install carbon, Restart to run install
 
-Everything else in the folder can stay where it is and doesnt need to be downloaded/touched.... they are only there for the docker creation
+The variable `CARBON` was added, default 1, set to 0 to Install a vanilla Rust server or 1 to install Carbon.
+
+
+## Minimum RAM warning
+
+The server requires at least 4096MB to run properly.
+This is mostly needed for the startup only, once it is running (depending on your world size) it should consume less.
+
+## Server Ports
+
+Ports required to run the server.
+
+| Port    | default |
+|---------|---------|
+| Game and Query | 28015 UDP |
+| RCON | 28016 TCP |
+
+### Information about server updates can be found [here](https://steamdb.info/app/258550/depots/?branch=staging)
+
+### Information about Carbon can be found [here](https://github.com/Carbon-Modding/Carbon.Core)
