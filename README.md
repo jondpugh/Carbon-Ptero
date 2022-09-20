@@ -14,12 +14,15 @@ This is mostly needed for the startup only, once it is running (depending on you
 
 ## Server Ports
 
-Ports required to run the server.
+Default ports required to run the server are listed below.
 
 | Port    | default |
 |---------|---------|
 | Game and Query | 28015 UDP |
 | RCON | 28016 TCP |
+| Rust+ | 28082 TCP |
+
+I would also suggest that as some Pterodactyl installs do not show in the in game server list adding the additional argument of +server.queryport 28015 to your rust variables.
 
 ### Information about server updates can be found [here](https://steamdb.info/app/258550/depots/?branch=staging)
 
