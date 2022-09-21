@@ -6,6 +6,7 @@ Adds variables to install carbon, Restart to run install
 
 The variable `CARBON` was added, default 1, set to 0 to Install a vanilla Rust server or 1 to install Carbon.
 
+A drop down list `BUILD` was also added to give you the option of which Carbon build you want to run, default is Release.
 
 ## Minimum RAM warning
 
