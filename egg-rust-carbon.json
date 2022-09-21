@@ -50,6 +50,16 @@
             "field_type": "text"
         },
         {
+            "name": "Nighty Build",
+            "description": "Set whether you want the server to use nightly or Release Carbon Builds. Valid options are \"1\" for Nighty and \"0\" for Release Build.",
+            "env_variable": "BUILD",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|boolean",
+            "field_type": "text"
+        },
+        {
             "name": "Level",
             "description": "The world file for Rust to use.",
             "env_variable": "LEVEL",
