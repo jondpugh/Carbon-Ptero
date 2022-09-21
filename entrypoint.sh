@@ -14,7 +14,11 @@ echo ":/home/container$ ${MODIFIED_STARTUP}"
 # Install Carbon 
 if [ -f CARBON_FLAG ] || [ "${CARBON}" = 1 ]; then
     echo "Updating Carbon..."
+     if [ -f BUILD_FLAG ] || [ "${BUILD}" = 1 ]; then 
+    curl -sSL "https://github.com/Carbon-Modding/Carbon.Core/releases/download/nightly/Carbon.Patch-Unix.zip" > Carbon.zip
+    else
     curl -sSL "https://github.com/Carbon-Modding/Carbon.Core/releases/latest/download/Carbon.Patch-Unix.zip" > Carbon.zip
+    fi
     unzip -o -q Carbon.zip
     rm Carbon.zip
     echo "Patching Rust systems with Carbon..."
