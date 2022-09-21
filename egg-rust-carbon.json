@@ -58,7 +58,7 @@
             "user_editable": true,
             "rules": "required|string|in:Release,Nightly,Beta",
             "field_type": "text"
-        }
+        },
         {
             "name": "Level",
             "description": "The world file for Rust to use.",
