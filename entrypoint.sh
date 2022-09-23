@@ -21,7 +21,7 @@ if [ -f CARBON_FLAG ] || [ "${CARBON}" = 1 ]; then
     elif [ -f BUILD_FLAG ] || [ "${BUILD}" = "Release" ]; then
         curl -sSL "https://github.com/Carbon-Modding/Carbon.Core/releases/latest/download/Carbon.Patch-Unix.zip" > Carbon.zip
     elif [ -f BUILD_FLAG ] || [ "${BUILD}" = "Beta" ]; then
-        curl -sSL "https://github.com/Carbon-Modding/Carbon.Core/releases/download/beta/Carbon.Patch-Unix.zip" > Carbon.zip
+        curl -sSL "https://github.com/Carbon-Modding/Carbon.Core/releases/download/unstable/Carbon.Patch-Unix.zip" > Carbon.zip
     fi
     unzip -o -q Carbon.zip
     rm Carbon.zip
