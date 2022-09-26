@@ -53,7 +53,7 @@
             "name": "Carbon Build",
             "description": "Set the Carbon Build that you want running on your server",
             "env_variable": "BUILD",
-            "default_value": "Release",
+            "default_value": "Production",
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|string|in:Production,Develop,Staging",
