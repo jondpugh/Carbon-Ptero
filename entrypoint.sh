@@ -16,12 +16,15 @@ echo ":/home/container$ ${MODIFIED_STARTUP}"
 # Release,Nightly,Beta
 if [ -f CARBON_FLAG ] || [ "${CARBON}" = 1 ]; then
     echo "Updating Carbon..."
-    if [ -f BUILD_FLAG ] || [ "${BUILD}" = "Nightly" ]; then 
-        curl -sSL "https://github.com/Carbon-Modding/Carbon.Core/releases/download/nightly/Carbon.Patch-Unix.zip" > Carbon.zip
-    elif [ -f BUILD_FLAG ] || [ "${BUILD}" = "Release" ]; then
-        curl -sSL "https://github.com/Carbon-Modding/Carbon.Core/releases/latest/download/Carbon.Patch-Unix.zip" > Carbon.zip
-    elif [ -f BUILD_FLAG ] || [ "${BUILD}" = "Beta" ]; then
-        curl -sSL "https://github.com/Carbon-Modding/Carbon.Core/releases/download/unstable/Carbon.Patch-Unix.zip" > Carbon.zip
+    if [ -f BUILD_FLAG ] || [ "${BUILD}" = "Develop" ]; then 
+        echo "Downloading Develop Build..."
+        curl -sSL "https://github.com/Carbon-Modding/Carbon.Core/releases/download/develop_build/Carbon.Patch-Unix.zip" > Carbon.zip
+    elif [ -f BUILD_FLAG ] || [ "${BUILD}" = "Production" ]; then
+        echo "Downloading Production Build..."
+        curl -sSL "https://github.com/Carbon-Modding/Carbon.Core/releases/download/production_build/Carbon.Patch-Unix.zip" > Carbon.zip
+    elif [ -f BUILD_FLAG ] || [ "${BUILD}" = "Staging" ]; then
+        echo "Downloading Staging Build..."
+        curl -sSL "https://github.com/Carbon-Modding/Carbon.Core/releases/download/staging_build/Carbon.Patch-Unix.zip" > Carbon.zip
     fi
     unzip -o -q Carbon.zip
     rm Carbon.zip
