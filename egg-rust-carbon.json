@@ -56,7 +56,7 @@
             "default_value": "Release",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|string|in:Release,Nightly,Beta",
+            "rules": "required|string|in:Production,Develop,Staging",
             "field_type": "text"
         },
         {
