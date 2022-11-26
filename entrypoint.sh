@@ -18,22 +18,19 @@ if [ -f CARBON_FLAG ] || [ "${CARBON}" = 1 ]; then
     echo "Updating Carbon..."
     if [ -f BUILD_FLAG ] || [ "${BUILD}" = "Develop" ]; then 
         echo "Downloading Develop Build..."
-        curl -sSL "https://github.com/Carbon-Modding/Carbon.Core/releases/download/develop_build/Carbon.Patch-Unix.zip" > Carbon.zip
+        curl -sSL "https://github.com/CarbonCommunity/Carbon.Core/releases/download/develop_build/Carbon.DebugUnix.tar.gz"> Carbon.tar.gz
     elif [ -f BUILD_FLAG ] || [ "${BUILD}" = "Production" ]; then
         echo "Downloading Production Build..."
-        curl -sSL "https://github.com/Carbon-Modding/Carbon.Core/releases/download/production_build/Carbon.Patch-Unix.zip" > Carbon.zip
+        curl -sSL "https://github.com/CarbonCommunity/Carbon.Core/releases/download/production_build/Carbon.ReleaseUnix.tar.gz" > Carbon.zip
     elif [ -f BUILD_FLAG ] || [ "${BUILD}" = "Staging" ]; then
         echo "Downloading Staging Build..."
-        curl -sSL "https://github.com/Carbon-Modding/Carbon.Core/releases/download/staging_build/Carbon.Patch-Unix.zip" > Carbon.zip
+        curl -sSL "https://github.com/CarbonCommunity/Carbon.Core/releases/download/staging_build/Carbon.DebugUnix.tar.gz" > Carbon.zip
     fi
-    unzip -o -q Carbon.zip
-    rm Carbon.zip
+    tar -xvf Carbon.tar.gz
+    rm Carbon.tar.gz
     echo "Patching Rust systems with Carbon..."
-    chmod +x carbon/tools/NStrip
-    rm carbon_prepatch.sh
-    curl -LJO "https://raw.githubusercontent.com/jondpugh/Carbon-Ptero/main/carbon_prepatch.sh"
-    chmod +x carbon_prepatch.sh
-    sh ./carbon_prepatch.sh
+    cmod +x carbon/tools/environment.sh
+    sh ./carbon/tools/environment.sh
     echo "Done Patching Rust!"
 fi
 
