@@ -21,10 +21,10 @@ if [ -f CARBON_FLAG ] || [ "${CARBON}" = 1 ]; then
         curl -sSL "https://github.com/CarbonCommunity/Carbon.Core/releases/download/develop_build/Carbon.DebugUnix.tar.gz"> Carbon.tar.gz
     elif [ -f BUILD_FLAG ] || [ "${BUILD}" = "Production" ]; then
         echo "Downloading Production Build..."
-        curl -sSL "https://github.com/CarbonCommunity/Carbon.Core/releases/download/production_build/Carbon.ReleaseUnix.tar.gz" > Carbon.zip
+        curl -sSL "https://github.com/CarbonCommunity/Carbon.Core/releases/download/production_build/Carbon.ReleaseUnix.tar.gz" > Carbon.tar.gz
     elif [ -f BUILD_FLAG ] || [ "${BUILD}" = "Staging" ]; then
         echo "Downloading Staging Build..."
-        curl -sSL "https://github.com/CarbonCommunity/Carbon.Core/releases/download/staging_build/Carbon.DebugUnix.tar.gz" > Carbon.zip
+        curl -sSL "https://github.com/CarbonCommunity/Carbon.Core/releases/download/staging_build/Carbon.DebugUnix.tar.gz" > Carbon.tar.gz
     fi
     tar -xvf Carbon.tar.gz
     rm Carbon.tar.gz
