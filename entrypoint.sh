@@ -31,6 +31,7 @@ if [ -f CARBON_FLAG ] || [ "${CARBON}" = 1 ]; then
     echo "Patching Rust systems with Carbon..."
     cmod +x carbon/tools/environment.sh
     sh ./carbon/tools/environment.sh
+    cmod +x carbon/tools/environment.sh
     echo "Done Patching Rust!"
 fi
 
