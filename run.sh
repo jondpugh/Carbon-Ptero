@@ -1,4 +1,6 @@
 #!/bin/sh
+set -x
+trap read debug
 echo "______________Stage 1______________"
 ./carbon/tools/environment.sh
 
