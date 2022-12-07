@@ -21,6 +21,7 @@ Default ports required to run the server are listed below.
 |---------|---------|
 | Game and Query | 28015 UDP |
 | RCON | 28016 TCP |
+| SWNET | 28017 UDP |
 | Rust+ | 28082 TCP |
 
 I would also suggest that as some Pterodactyl installs do not show in the in game server list adding the additional argument of +server.queryport 28015 to your rust variables.
