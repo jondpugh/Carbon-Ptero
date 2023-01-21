@@ -13,7 +13,6 @@
     "docker_images": {
         "jondpugh\/rustcarbon:latest": "jondpugh\/rustcarbon:latest"
     },
-    "file_denylist": [],
     "startup": ".\/run.sh \\\"{{SERVER_PORT}}\\\" \\\"{{RCON_PORT}}\\\" \\\"{{HOSTNAME}}\\\" \\\"{{LEVEL}}\\\" \\\"{{DESCRIPTION}}\\\" \\\"{{SERVER_URL}}\\\" \\\"{{SERVER_IMG}}\\\" \\\"{{SERVER_LOGO}}\\\" \\\"{{MAX_PLAYERS}}\\\" \\\"{{RCON_PASS}}\\\" \\\"{{SAVEINTERVAL}}\\\" \\\"{{APP_PORT}}\\\" \\\"{{WORLD_SIZE}}\\\" \\\"{{WORLD_SEED}}\\\" \\\"{{ADDITIONAL_ARGS}}\\\" \\\"{{MAP_URL}}\\\"",
     "config": {
         "files": "{}",
