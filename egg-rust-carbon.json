@@ -13,7 +13,7 @@
     "docker_images": {
         "jondpugh\/rustcarbon:latest": "jondpugh\/rustcarbon:latest"
     },
-    "startup": ".\/run.sh \\\"{{SERVER_PORT}}\\\" \\\"{{RCON_PORT}}\\\" \\\"{{HOSTNAME}}\\\" \\\"{{LEVEL}}\\\" \\\"{{DESCRIPTION}}\\\" \\\"{{SERVER_URL}}\\\" \\\"{{SERVER_IMG}}\\\" \\\"{{SERVER_LOGO}}\\\" \\\"{{MAX_PLAYERS}}\\\" \\\"{{RCON_PASS}}\\\" \\\"{{SAVEINTERVAL}}\\\" \\\"{{APP_PORT}}\\\" \\\"{{WORLD_SIZE}}\\\" \\\"{{WORLD_SEED}}\\\" \\\"{{ADDITIONAL_ARGS}}\\\" \\\"{{MAP_URL}}\\\"",
+    "startup": ".\/run.sh \\\"{{SERVER_PORT}}\\\" \\\"{{RCON_PORT}}\\\" \\\"{{HOSTNAME}}\\\" \\\"{{LEVEL}}\\\" \\\"{{DESCRIPTION}}\\\" \\\"{{SERVER_URL}}\\\" \\\"{{SERVER_IMG}}\\\" \\\"{{SERVER_LOGO}}\\\" \\\"{{MAX_PLAYERS}}\\\" \\\"{{QUERY_PORT}}\\\" \\\"{{RCON_PASS}}\\\" \\\"{{SAVEINTERVAL}}\\\" \\\"{{APP_PORT}}\\\" \\\"{{WORLD_SIZE}}\\\" \\\"{{WORLD_SEED}}\\\" \\\"{{ADDITIONAL_ARGS}}\\\" \\\"{{MAP_URL}}\\\"",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"Server startup complete\"\r\n}",
@@ -133,6 +133,16 @@
             "description": "Port for RCON connections.",
             "env_variable": "RCON_PORT",
             "default_value": "28016",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|integer",
+            "field_type": "text"
+        },
+        {
+            "name": "Query Port",
+            "description": "Port used for server Query (Need to be separate from gameport).",
+            "env_variable": "QUERY_PORT",
+            "default_value": "28017",
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|integer",
