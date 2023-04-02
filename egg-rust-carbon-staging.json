@@ -59,16 +59,6 @@
             "field_type": "text"
         },
         {
-            "name": "Carbon Build",
-            "description": "Set the Carbon Build that you want running on your server",
-            "env_variable": "BUILD",
-            "default_value": "Production",
-            "user_viewable": true,
-            "user_editable": true,
-            "rules": "required|string|in:Production,Develop,Staging,Commit",
-            "field_type": "text"
-        },
-        {
             "name": "Level",
             "description": "The world file for Rust to use.",
             "env_variable": "LEVEL",
