@@ -11,9 +11,9 @@
         "steam_disk_space"
     ],
     "docker_images": {
-        "jondpugh\/rustcarbon:latest": "jondpugh\/rustcarbon:latest"
+        "jondpugh\/carbondev:latest": "jondpugh\/carbondev:latest"
     },
-    "startup": ".\/run.sh \\\"{{SERVER_PORT}}\\\" \\\"{{RCON_PORT}}\\\" \\\"{{HOSTNAME}}\\\" \\\"{{LEVEL}}\\\" \\\"{{DESCRIPTION}}\\\" \\\"{{SERVER_URL}}\\\" \\\"{{SERVER_IMG}}\\\" \\\"{{SERVER_LOGO}}\\\" \\\"{{MAX_PLAYERS}}\\\" \\\"{{QUERY_PORT}}\\\" \\\"{{RCON_PASS}}\\\" \\\"{{SAVEINTERVAL}}\\\" \\\"{{APP_PORT}}\\\" \\\"{{WORLD_SIZE}}\\\" \\\"{{WORLD_SEED}}\\\" \\\"{{ADDITIONAL_ARGS}}\\\" \\\"{{MAP_URL}}\\\"",
+    "startup": ".\/run.sh \\\"{{SERVER_PORT}}\\\" \\\"{{SERVER_IDENTITY}}\\\" \\\"{{RCON_PORT}}\\\" \\\"{{HOSTNAME}}\\\" \\\"{{LEVEL}}\\\" \\\"{{DESCRIPTION}}\\\" \\\"{{SERVER_URL}}\\\" \\\"{{SERVER_IMG}}\\\" \\\"{{SERVER_LOGO}}\\\" \\\"{{MAX_PLAYERS}}\\\" \\\"{{QUERY_PORT}}\\\" \\\"{{RCON_PASS}}\\\" \\\"{{SAVEINTERVAL}}\\\" \\\"{{APP_PORT}}\\\" \\\"{{WORLD_SIZE}}\\\" \\\"{{WORLD_SEED}}\\\" \\\"{{MAP_URL}}\\\" \\\"{{GAMEMODE}}\\\" \\\"{{SERVER_TAGS}}\\\" \\\"{{APP_PUBLIC_IP}}\\\" \\\"{{CARBON_ROOT}}\\\" \\\"{{ADDITIONAL_ARGS}}\\\"",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"Server startup complete\"\r\n}",
@@ -82,7 +82,7 @@
             "name": "URL",
             "description": "The URL for your server. This is what comes up when clicking the \"Visit Website\" button.",
             "env_variable": "SERVER_URL",
-            "default_value": "https://github.com/Carbon-Modding/Carbon.Core",
+            "default_value": "https:\/\/github.com\/Carbon-Modding\/Carbon.Core",
             "user_viewable": true,
             "user_editable": true,
             "rules": "nullable|url",
@@ -122,7 +122,7 @@
             "name": "Server Image",
             "description": "The header image for the top of your server listing.",
             "env_variable": "SERVER_IMG",
-            "default_value": "https://i.imgur.com/Y19hZJn.png",
+            "default_value": "https:\/\/i.imgur.com\/Y19hZJn.png",
             "user_viewable": true,
             "user_editable": true,
             "rules": "nullable|url",
@@ -206,6 +206,56 @@
             "user_viewable": true,
             "user_editable": true,
             "rules": "nullable|url",
+            "field_type": "text"
+        },
+        {
+            "name": "Gamemode",
+            "description": "Sets the servers gamemode.",
+            "env_variable": "GAMEMODE",
+            "default_value": "vanilla",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|in:vanilla,softcore,hardcore",
+            "field_type": "text"
+        },
+        {
+            "name": "Server Tags",
+            "description": "A list of all server tags available can be found here: https:\/\/wiki.facepunch.com\/rust\/server-browser-tags",
+            "env_variable": "SERVER_TAGS",
+            "default_value": "vanilla,weekly",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string",
+            "field_type": "text"
+        },
+        {
+            "name": "Rust+ Public IP",
+            "description": "This should be set to the public IP address of the node.",
+            "env_variable": "APP_PUBLIC_IP",
+            "default_value": "0.0.0.0",
+            "user_viewable": true,
+            "user_editable": false,
+            "rules": "required|ipv4",
+            "field_type": "text"
+        },
+        {
+            "name": "Carbon Root Directory",
+            "description": "Change Carbons Root Directory",
+            "env_variable": "CARBON_ROOT",
+            "default_value": "carbon",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "Server Identity",
+            "description": "Server Identity",
+            "env_variable": "SERVER_IDENTITY",
+            "default_value": "rust",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
             "field_type": "text"
         }
     ]
