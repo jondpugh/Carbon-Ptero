@@ -11,7 +11,7 @@
         "steam_disk_space"
     ],
     "docker_images": {
-        "jondpugh\/carbondev:latest": "jondpugh\/carbondev:latest"
+        "jondpugh\/rustcarbon:latest": "jondpugh\/rustcarbon:latest"
     },
     "startup": ".\/run.sh \\\"{{SERVER_PORT}}\\\" \\\"{{SERVER_IDENTITY}}\\\" \\\"{{RCON_PORT}}\\\" \\\"{{HOSTNAME}}\\\" \\\"{{LEVEL}}\\\" \\\"{{DESCRIPTION}}\\\" \\\"{{SERVER_URL}}\\\" \\\"{{SERVER_IMG}}\\\" \\\"{{SERVER_LOGO}}\\\" \\\"{{MAX_PLAYERS}}\\\" \\\"{{QUERY_PORT}}\\\" \\\"{{RCON_PASS}}\\\" \\\"{{SAVEINTERVAL}}\\\" \\\"{{APP_PORT}}\\\" \\\"{{WORLD_SIZE}}\\\" \\\"{{WORLD_SEED}}\\\" \\\"{{MAP_URL}}\\\" \\\"{{GAMEMODE}}\\\" \\\"{{SERVER_TAGS}}\\\" \\\"{{APP_PUBLIC_IP}}\\\" \\\"{{CARBON_ROOT}}\\\" \\\"{{ADDITIONAL_ARGS}}\\\"",
     "config": {
