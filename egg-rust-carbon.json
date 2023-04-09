@@ -55,7 +55,7 @@
             "default_value": "Production",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|string|in:Production,Develop,Staging,Commit",
+            "rules": "required|string|in:Production,Preview,Edge",
             "field_type": "text"
         },
         {
