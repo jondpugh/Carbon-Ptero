@@ -38,16 +38,6 @@
             "rules": "required|string|max:60",
             "field_type": "text"
         },
-      {
-            "name": "Branch",
-            "description": "Select the branch to install, such as staging or workcart",
-            "env_variable": "BRANCH",
-            "default_value": "staging",
-            "user_viewable": true,
-            "user_editable": true,
-            "rules": "required|string|in:Staging,Aux01,Aux02",
-            "field_type": "text"
-        },
         {
             "name": "Carbon",
             "description": "Set whether you want the server to use and auto update Carbon or not. Valid options are \"1\" for true and \"0\" for false.",
@@ -56,6 +46,16 @@
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|boolean",
+            "field_type": "text"
+        }, 
+        {
+            "name": "Branch",
+            "description": "Select the branch to install, such as staging or workcart",
+            "env_variable": "BRANCH",
+            "default_value": "staging",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:Staging,Aux01,Aux02",
             "field_type": "text"
         },
         {
