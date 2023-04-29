@@ -13,7 +13,7 @@
     "docker_images": {
         "jondpugh\/carbonstaging:latest": "jondpugh\/carbonstaging:latest"
     },
-    "startup": ".\/run.sh \\\"{{SERVER_PORT}}\\\" \\\"{{RCON_PORT}}\\\" \\\"{{HOSTNAME}}\\\" \\\"{{LEVEL}}\\\" \\\"{{DESCRIPTION}}\\\" \\\"{{SERVER_URL}}\\\" \\\"{{SERVER_IMG}}\\\" \\\"{{SERVER_LOGO}}\\\" \\\"{{MAX_PLAYERS}}\\\" \\\"{{QUERY_PORT}}\\\" \\\"{{RCON_PASS}}\\\" \\\"{{SAVEINTERVAL}}\\\" \\\"{{APP_PORT}}\\\" \\\"{{WORLD_SIZE}}\\\" \\\"{{WORLD_SEED}}\\\" \\\"{{ADDITIONAL_ARGS}}\\\" \\\"{{MAP_URL}}\\\"",
+    "startup": ".\/run.sh \\\"{{SERVER_PORT}}\\\" \\\"{{SERVER_IDENTITY}}\\\" \\\"{{RCON_PORT}}\\\" \\\"{{HOSTNAME}}\\\" \\\"{{LEVEL}}\\\" \\\"{{DESCRIPTION}}\\\" \\\"{{SERVER_URL}}\\\" \\\"{{SERVER_IMG}}\\\" \\\"{{SERVER_LOGO}}\\\" \\\"{{MAX_PLAYERS}}\\\" \\\"{{QUERY_PORT}}\\\" \\\"{{RCON_PASS}}\\\" \\\"{{SAVEINTERVAL}}\\\" \\\"{{APP_PORT}}\\\" \\\"{{WORLD_SIZE}}\\\" \\\"{{WORLD_SEED}}\\\" \\\"{{MAP_URL}}\\\" \\\"{{GAMEMODE}}\\\" \\\"{{SERVER_TAGS}}\\\" \\\"{{APP_PUBLIC_IP}}\\\" \\\"{{CARBON_ROOT}}\\\" \\\"{{ADDITIONAL_ARGS}}\\\"",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"Server startup complete\"\r\n}",
