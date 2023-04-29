@@ -59,6 +59,16 @@
             "field_type": "text"
         },
         {
+            "name": "Update",
+            "description": "Set whether you want the server to use and auto update Rust or not. Valid options are \"1\" for true and \"0\" for false.",
+            "env_variable": "UPDATE",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|boolean",
+            "field_type": "text"
+        },
+        {
             "name": "Level",
             "description": "The world file for Rust to use.",
             "env_variable": "LEVEL",
@@ -206,6 +216,56 @@
             "user_viewable": true,
             "user_editable": true,
             "rules": "nullable|url",
+            "field_type": "text"
+        },
+        {
+            "name": "Gamemode",
+            "description": "Sets the servers gamemode.",
+            "env_variable": "GAMEMODE",
+            "default_value": "vanilla",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|in:vanilla,softcore,hardcore",
+            "field_type": "text"
+        },
+        {
+            "name": "Server Tags",
+            "description": "A list of all server tags available can be found here: https:\/\/wiki.facepunch.com\/rust\/server-browser-tags",
+            "env_variable": "SERVER_TAGS",
+            "default_value": "vanilla,weekly",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string",
+            "field_type": "text"
+        },
+        {
+            "name": "Rust+ Public IP",
+            "description": "This should be set to the public IP address of the node.",
+            "env_variable": "APP_PUBLIC_IP",
+            "default_value": "0.0.0.0",
+            "user_viewable": true,
+            "user_editable": false,
+            "rules": "required|ipv4",
+            "field_type": "text"
+        },
+        {
+            "name": "Carbon Root Directory",
+            "description": "Change Carbons Root Directory",
+            "env_variable": "CARBON_ROOT",
+            "default_value": "carbon",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "Server Identity",
+            "description": "Server Identity",
+            "env_variable": "SERVER_IDENTITY",
+            "default_value": "rust",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
             "field_type": "text"
         }
     ]
