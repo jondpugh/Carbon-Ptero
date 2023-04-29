@@ -55,7 +55,7 @@
             "default_value": "staging",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|string|in:Staging,Aux01,Aux02",
+            "rules": "required|string|in:staging,aux01,aux02",
             "field_type": "text"
         },
         {
