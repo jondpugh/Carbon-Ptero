@@ -40,14 +40,14 @@
         },
         {
             "name": "Carbon",
-            "description": "Set whether you want the server to use and auto update Carbon or not. Valid options are \"1\" for true and \"0\" for false.",
+            "description": "Set whether you want the server to Just use the installed version of Carbon, auto update Carbon or run Vanilla Rust.",
             "env_variable": "CARBON",
-            "default_value": "1",
+            "default_value": "Update",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|boolean",
+            "rules": "required|string|in:Update,No-Update,Vanilla",
             "field_type": "text"
-        }, 
+        },
         {
             "name": "Branch",
             "description": "Select the branch to install, such as staging or workcart",
@@ -266,6 +266,16 @@
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "LogFile",
+            "description": "Save a logfile? Logs will be located in your /home/container/logs folder, Valid options are \"1\" for true and \"0\" for false.",
+            "env_variable": "LOGFILE",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|boolean",
             "field_type": "text"
         }
     ]
