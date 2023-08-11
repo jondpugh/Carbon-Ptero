@@ -59,16 +59,6 @@
             "field_type": "text"
         },
         {
-            "name": "Minimal",
-            "description": "Install the Minimal version. Valid options are \"1\" for true and \"0\" for false.",
-            "env_variable": "MINIMAL",
-            "default_value": "0",
-            "user_viewable": true,
-            "user_editable": true,
-            "rules": "required|boolean",
-            "field_type": "text"
-        },
-        {
             "name": "Update",
             "description": "Set whether you want the server to use and auto update Rust or not. Valid options are \"1\" for true and \"0\" for false.",
             "env_variable": "UPDATE",
