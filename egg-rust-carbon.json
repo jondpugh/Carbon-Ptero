@@ -69,6 +69,16 @@
             "field_type": "text"
         },
         {
+            "name": "Minimal",
+            "description": "Set if you want the Minimal version of Carbon or not. Valid options are \"1\" for true and \"0\" for false.",
+            "env_variable": "MINIMAL",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|boolean",
+            "field_type": "text"
+        },
+        {
             "name": "Level",
             "description": "The world file for Rust to use.",
             "env_variable": "LEVEL",
