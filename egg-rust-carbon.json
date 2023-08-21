@@ -235,7 +235,7 @@
             "default_value": "vanilla",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "nullable|string|in:vanilla,softcore,hardcore",
+            "rules": "nullable|string|in:vanilla,softcore,hardcore,",
             "field_type": "text"
         },
         {
